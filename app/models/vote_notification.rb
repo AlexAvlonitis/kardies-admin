@@ -1,0 +1,2 @@
+class VoteNotification < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class ConversationNotification < ApplicationRecord
+end

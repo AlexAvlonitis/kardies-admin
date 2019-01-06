@@ -1,0 +1,2 @@
+class SearchCriterium < ApplicationRecord
+end

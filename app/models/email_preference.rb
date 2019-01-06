@@ -1,0 +1,2 @@
+class EmailPreference < ApplicationRecord
+end
