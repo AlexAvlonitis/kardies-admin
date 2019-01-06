@@ -57,6 +57,7 @@ group :development do
   gem 'capistrano-rbenv'
   gem 'capistrano-upload-config'
   gem 'capistrano3-puma'
+  gem 'sshkit-sudo'
 end
 
 group :test do
