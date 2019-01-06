@@ -12,6 +12,7 @@ class ContactDashboard < Administrate::BaseDashboard
     email: Field::String,
     subject: Field::Text,
     description: Field::Text,
+    created_at: Field::DateTime
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -31,7 +32,8 @@ class ContactDashboard < Administrate::BaseDashboard
     :name,
     :email,
     :subject,
-    :description
+    :description,
+    :created_at
   ].freeze
 
   # FORM_ATTRIBUTES
