@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :users
+    resources :reports,  only: [:index, :show, :destroy]
     resources :contacts, only: [:index, :show, :destroy]
 
     root to: "users#index"
