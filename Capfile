@@ -2,11 +2,11 @@ require 'capistrano/setup'
 require 'capistrano/deploy'
 require 'capistrano/nginx'
 require 'capistrano/rbenv'
+require 'capistrano/bundler'
 require 'capistrano/puma'
 install_plugin Capistrano::Puma
 require 'capistrano/puma/nginx'
 install_plugin Capistrano::Puma::Nginx
-require 'capistrano/bundler'
 require 'capistrano/rails/console'
 require 'capistrano/upload-config'
 require 'sshkit/sudo'
