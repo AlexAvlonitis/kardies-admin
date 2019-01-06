@@ -49,6 +49,14 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
   gem 'pry-rails'
+  # Deployment
+  gem 'capistrano'
+  gem 'capistrano-nginx'
+  gem 'capistrano-rails'
+  gem 'capistrano-rails-console'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-upload-config'
+  gem 'capistrano3-puma'
 end
 
 group :test do
