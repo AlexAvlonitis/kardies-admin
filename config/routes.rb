@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :users
-    resources :contacts, except: [:edit, :update]
+    resources :contacts, only: [:index, :show, :destroy]
 
     root to: "users#index"
   end
