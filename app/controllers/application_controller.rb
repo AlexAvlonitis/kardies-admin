@@ -4,5 +4,5 @@
 #
 # If you want to add pagination or other controller-level concerns,
 # you're free to overwrite the RESTful controller actions.
-class ApplicationController < ActionController
+class ApplicationController < ActionController::Base
 end
