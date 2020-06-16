@@ -17,5 +17,6 @@ RUN npm install
 
 COPY Gemfile Gemfile.lock ./
 RUN bundle install
+RUN bundle exec rails assets:precomplile
 
 COPY . .
