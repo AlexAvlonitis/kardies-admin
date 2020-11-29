@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   devise :database_authenticatable
+  paginates_per 50
 
   has_one  :about,                      dependent: :destroy
   has_one  :user_detail,                dependent: :destroy
