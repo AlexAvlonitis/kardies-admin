@@ -1,1 +1,39 @@
-<%= @user.username %>
+<h1> <%= @user.username %> </h1>
+<%= button_to 'Edit', edit_admin_user_path(@user), class: 'btn btn-primary', method: :get %>
+<strong>Details</strong>
+
+<table class='table table-bordered'>
+  <tr>
+    <td><strong>ID</strong></td>
+    <td><%= @user.id %></td>
+  </tr>
+  <tr>
+    <td><strong>username</strong></td>
+    <td><%= @user.username %></td>
+  </tr>
+  <tr>
+    <td><strong>Email</strong></td>
+    <td><%= @user.email %></td>
+  </tr>
+  <tr>
+    <td><strong>Online?</strong></td>
+    <td><%= @user.is_signed_in %></td>
+  </tr>
+  <tr>
+    <td><strong>Created At</strong></td>
+    <td><%= @user.created_at %></td>
+  </tr>
+  <tr>
+    <td><strong>Gender</strong></td>
+    <td><%= @user.user_detail.gender %></td>
+  </tr>
+  <tr>
+    <td><strong>Age</strong></td>
+    <td><%= @user.user_detail.age %></td>
+  </tr>
+  <tr>
+    <td><strong>State</strong></td>
+    <td><%= @user.user_detail.state %></td>
+  </tr>
+</table>
+<%= render 'messages', user: @user %>
