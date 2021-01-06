@@ -33,6 +33,7 @@ module Admin
         :username,
         :email,
         user_detail_attributes: [
+          :id,
           :gender,
           :state,
           :age
