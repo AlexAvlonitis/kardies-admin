@@ -6,10 +6,10 @@ Rails.application.routes.draw do
   root to: redirect('/admin')
 
   namespace :admin do
+    root to: "users#index"
+
     resources :users
     resources :reports,  only: [:index, :show, :destroy]
     resources :contacts, only: [:index, :show, :destroy]
-
-    root to: "users#index"
   end
 end

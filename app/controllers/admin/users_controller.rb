@@ -3,7 +3,14 @@ module Admin
     before_action :set_user, only: [:edit, :show, :update]
 
     def index
-      @users = User.page(params[:page]).order(id: :desc)
+      username = params[:query]
+      if username
+        users = User.where("username LIKE ?", "%#{username}%")
+      else
+        users = User.all
+      end
+
+      @users = users.page(params[:page]).order(id: :desc)
     end
 
     def update
@@ -30,6 +37,7 @@ module Admin
 
     def user_params
       params.require(:user).permit(
+        :query,
         :username,
         :email,
         user_detail_attributes: [
