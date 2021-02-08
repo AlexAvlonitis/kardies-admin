@@ -10,7 +10,6 @@ class User < ApplicationRecord
   has_many :search_criteria,            dependent: :destroy
   has_many :vote_notifications,         dependent: :destroy
   has_many :blocked_users,              dependent: :destroy
-  has_many :conversation_notifications, dependent: :destroy
   has_many :pictures, through: :gallery
   has_many :oauth_access_tokens,
            foreign_key: :resource_owner_id,
